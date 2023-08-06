@@ -10,7 +10,7 @@ import time
 from pymystem3 import Mystem
 import requests
 from bs4 import BeautifulSoup
-
+#pyinstaller --noconsole --onefile asist.py
 pygame.mixer.init()
 def fpar(url,txt):
     response = requests.get(url)
@@ -79,7 +79,7 @@ def g_zapr(txt):
     if(fp2 == ''):
         fp2= 'Ошибка запроса, попробуйте переформулировать'
     zv2(fp2)
-#pyinstaller --noconsole --onefile asist.py
+
 def zv (nm):
     pygame.mixer.init()
     pygame.mixer.music.load(nm)
@@ -216,8 +216,7 @@ def chk_game(txt):
                         else:
                             wb(fnd_gm[j][1])
                         return 1
-        else:
-            return 0
+
     return 0
 def chk_muz(txt):
     for i in fnd_muz:
